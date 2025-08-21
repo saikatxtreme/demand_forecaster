@@ -16,7 +16,7 @@ def week_of_month(dt, week_start='MON'):
     first = s.replace(day=1)
     weeknum_first = first.to_period(anchor)
     weeknum_curr = s.to_period(anchor)
-    return (weeknum_curr - weeknum_first) + 1
+    return (weeknum_curr - weeknum_first).n + 1
 
 def period_start(dt, freq, week_start='MON'):
     if freq == 'D':
